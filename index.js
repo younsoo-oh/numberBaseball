@@ -43,10 +43,13 @@ check.addEventListener('click', ()=>{
     } else {
         count++
     }
+    if (value.length < 4) {
+        alert('4자리 숫자를 입력하세요.');
+    } 
     const findDuplicate = Array.from(new Set(valueArray));
         if (findDuplicate.length < 4) {
             alert('중복되지 않는 숫자를 입력하세요.');
-        } 
+        }
     /* 중복되는 숫자를 입력하면 오류가 뜨도록 함 
     set()은 배열에 넣으면 중복되는 값을 제거 valueArray는 배열상태
     Array.from()은 객체들을 배열로 변화시킴
